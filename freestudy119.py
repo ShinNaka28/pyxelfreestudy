@@ -148,10 +148,10 @@ class App:
         if pyxel.btn(pyxel.KEY_LEFT) and self.player_x > 4 or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_LEFT) and self.player_x > 4:
             self.player_x -= 2
         
-        if pyxel.btn(pyxel.KEY_UP) and self.player_y > 0 or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_DOWN) and self.player_y > 0:
+        if pyxel.btn(pyxel.KEY_UP) and self.player_y > 0 or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_UP) and self.player_y > 0:
             self.player_y -= 2
             
-        if pyxel.btn(pyxel.KEY_DOWN) and self.player_y < SCREEN_HEIGHT - 16 or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_UP) and self.player_y < SCREEN_HEIGHT - 16:
+        if pyxel.btn(pyxel.KEY_DOWN) and self.player_y < SCREEN_HEIGHT - 16 or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_DOWN) and self.player_y < SCREEN_HEIGHT - 16:
             self.player_y += 2
 
         # 石を追加
@@ -342,6 +342,7 @@ class App:
             pyxel.text(SCREEN_WIDTH // 2 - 20, SCREEN_HEIGHT // 2, "Game Over", pyxel.COLOR_YELLOW)
             if pyxel.frame_count % 120 == 0:
                 pyxel.quit()
+
 
 
 App()
